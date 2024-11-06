@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+</head>
+<body>
+    <h1>Ola mundo</h1>
+    <p>Meu primeiro script</p> <!--comentario HTML-->
+    <script>
+       var n1 = Number.parseInt(window.prompt('Digite um número: ')) //Number.parseInt converte para numero inteiro
+       var n2 = Number(window.prompt('Digite outro número: ')) //Só number ele vai decidir qual é melhor, inteiro ou com virgula
+
+       var s = n1 + n2
+       window.alert('A soma dos valores é: ' + String(s)) //converti para string
+       window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) // uma template string
+
+       //window.prompt retorna uma string
+       //number + number para adição
+       //string + string para concatenação
+       //parse é converter
+       //int é inteiro e float é com virgula
+       //converter para string: String(n) ou n.toString()
+       //templete string precisa usar `` e a variavel estará dentro de ${n}
+       //s.length quantos caracteres a string tem
+       //s.toUpperCase() tudo para maiusculas
+       //s.toLowerCase() tudo para minusculas
+    </script>
+</body>
+</html>

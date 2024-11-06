@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(110, 164, 211);
+            color: white;
+            font: normal 13pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div>Clique em mim</div>
+    <div id="msg">Clique sim</div>
+    <div id="asmr">Clica não</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]// o 0 seleciona o primeiro paragrafo apenas
+        p1.style.color = 'blue' //Muda cor da var p1
+        window.document.write('Está escrito assim: ' + p1.innerText)//p1 é a variavel, innerText vai reescrever o que está dentro da variavel
+
+        var p2 = document.getElementsByTagName('p')[1]
+        window.document.write(' Aqui esta o p2: '+ p2.innerHTML)//innerHTML pega as tags HTML tambem, nao apenas o texto
+
+        var d = window.document.getElementById('msg')//selecionei a div pelo ID dela
+        d.style.background = 'green' // mudei a cor de fundo para verde
+        d.innerText = 'Não clique' // troquei o texto para Não clique
+
+        var b = document.querySelector('div#asmr')//toda ID é usado #, toda CLASS é usado .
+        b.style.color = 'blue'
+        b.style.background = 'white'
+    </script>
+</body>
+</html>

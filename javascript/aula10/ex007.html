@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> + <!--input é a caixinha que voce digita algo. type number é para digitar um numero. name e id é a nametag para chamar-->
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()"> <!--type button é um botão. value é o que vai dentro dele. onlclick é o nome da função que será executada ao clicar-->
+    <div id="res">Resultado</div><!--Div com id RES para ser usado la em baixo na function-->
+
+    <script>
+        function somar(){
+            var tn1 = document.getElementById('txtn1')//pegando elemento pela id
+            var tn2 = document.querySelector('input#txtn2')//selecionando o elemento que tem input com #id txtn2
+            var res = document.getElementById('res')
+            var n1 = Number(tn1.value)//converte a string tn1 para number
+            var n2 = Number(tn2.value)//converte a string tn2 para number
+            var s = n1 + n2 //var "s" soma o Number n1 e n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`//div com id RES, terá o texto HTML substituido para o que tem dento da crase ``, foi usado crase por causa do ${}
+
+
+        }
+    </script>
+</body>
+</html>
